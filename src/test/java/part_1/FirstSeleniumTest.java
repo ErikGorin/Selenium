@@ -3,10 +3,10 @@ package part_1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class FirstSeleniumTest {
@@ -14,9 +14,9 @@ public class FirstSeleniumTest {
 
     @BeforeClass
     public void setUp(){
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://feelgrounded.com/account/login");
+        driver.get("https://profile.w3schools.com/login");
     }
 
     @AfterClass
@@ -26,11 +26,13 @@ public class FirstSeleniumTest {
     @Test
     public void testLogging() throws InterruptedException {
         Thread.sleep(3000);
-       WebElement username =  driver.findElement(By.name("customer[email]"));
+       WebElement username =  driver.findElement(By.name("email"));
        username.sendKeys("rerety84@gmail.com");
-       var password = driver.findElement(By.name("customer[password]"));
-       password.sendKeys("Admin12345");
+       var password = driver.findElement(By.name("password"));
+       password.sendKeys("Ut}ih!@!H%.D8*+");
 
-       driver.findElement(By.className("button")).click();
+//       driver.findElement(By.("")).click();
+        Thread.sleep(3000);
+
     }
 }
