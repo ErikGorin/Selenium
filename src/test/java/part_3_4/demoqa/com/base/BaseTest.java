@@ -1,29 +1,31 @@
-package part_2.saucedemo.com.base;
+package part_3_4.demoqa.com.base;
 
+import demoqa.main.HomePage;
+import org.ex.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.ex.BasePage;
-import saucedemo.main.LoginPage;
+import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
-    private static final Logger log = LoggerFactory.getLogger(BaseTest.class);
-    protected WebDriver driver;
+    private WebDriver driver;
     protected BasePage basePage;
-    protected LoginPage loginPage;
-    private String url = "https://www.saucedemo.com";
+    protected HomePage homePage;
+    private String DEMOQA_URL = "https://demoqa.com/";
 
     @BeforeClass
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get(url);
+    }
+
+    @BeforeMethod
+    public void loadApplication() {
+        driver.get(DEMOQA_URL);
         basePage = new BasePage();
         basePage.setDriver(driver);
-        loginPage = new LoginPage();
+        homePage = new HomePage();
     }
 
     @AfterClass

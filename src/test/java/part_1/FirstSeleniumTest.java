@@ -13,25 +13,26 @@ public class FirstSeleniumTest {
     WebDriver driver;
 
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://profile.w3schools.com/login");
     }
 
     @AfterClass
-    public void tearDown(){
-        driver.quit();
+    public void tearDown() {
+//        driver.quit();
     }
+
     @Test
     public void testLogging() throws InterruptedException {
         Thread.sleep(3000);
-       WebElement username =  driver.findElement(By.name("email"));
-       username.sendKeys("rerety84@gmail.com");
-       var password = driver.findElement(By.name("password"));
-       password.sendKeys("Ut}ih!@!H%.D8*+");
+        WebElement username = driver.findElement(By.name("email"));
+        username.sendKeys("rerety84@gmail.com");
+        var password = driver.findElement(By.name("password"));
+        password.sendKeys("Ut}ih!@!H%.D8*+");
 
-//       driver.findElement(By.("")).click();
+        driver.findElement(By.xpath("//div[@id='root']//button[text()='Login']")).click();
         Thread.sleep(3000);
 
     }

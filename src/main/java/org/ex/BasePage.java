@@ -1,4 +1,4 @@
-package saucedemo.main;
+package org.ex;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
