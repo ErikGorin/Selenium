@@ -1,6 +1,6 @@
-package saucedemo.main;
+package demo.saucedemo;
 
-import org.ex.BasePage;
+import demo.base.BasePage;
 import org.openqa.selenium.By;
 
 public class LoginPage extends BasePage {

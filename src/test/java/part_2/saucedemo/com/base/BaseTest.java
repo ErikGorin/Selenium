@@ -6,8 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.ex.BasePage;
-import saucedemo.main.LoginPage;
+import demo.base.BasePage;
+import demo.saucedemo.LoginPage;
 
 public class BaseTest {
     private static final Logger log = LoggerFactory.getLogger(BaseTest.class);
