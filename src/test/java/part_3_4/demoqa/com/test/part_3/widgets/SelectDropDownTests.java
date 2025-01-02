@@ -22,6 +22,6 @@ public class SelectDropDownTests extends BaseTest {
         Assert.assertTrue(actualSelectedOption.contains("Volvo"));
         Assert.assertTrue(actualSelectedOption.contains("Opel"));
         Assert.assertTrue(actualSelectedOption.contains("Saab"));
-        Assert.assertTrue(actualSelectedOption.contains("Audi"), "\n Audi is Selected\n");
+        Assert.assertTrue(actualSelectedOption.contains("Audi"), "\n Audi is Selected\n"); //False
     }
 }
