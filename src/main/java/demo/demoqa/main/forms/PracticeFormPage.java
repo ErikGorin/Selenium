@@ -9,6 +9,7 @@ public class PracticeFormPage extends FormsPage {
     private By sportsHobbyCheckbox = By.cssSelector("label[for='hobbies-checkbox-1']");
     private By readingHobbyCheckbox = By.cssSelector("label[for='hobbies-checkbox-2']");
     private By musicHobbyCheckbox = By.cssSelector("label[for='hobbies-checkbox-3']");
+    private By submitButton = By.id("submit");
 
     public void clickFemaleRadioButton() {
         scrollToElementJS(femaleRadioButton);
@@ -51,4 +52,8 @@ public class PracticeFormPage extends FormsPage {
         return find(readingHobbyCheckbox).isSelected();
     }
 
+    public void clickSubmitButton() {
+//        scrollToElementJS(submitButton);
+        click(submitButton);
+    }
 }
