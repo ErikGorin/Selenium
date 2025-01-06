@@ -12,5 +12,8 @@ public class FramesTest extends BaseTest {
         String actualBigBoxText = framesPage.getTextInBigFrame();
         String expectedBigBoxText = "This is a sample page";
         Assert.assertEquals(actualBigBoxText, expectedBigBoxText, "\n Actual & Expected Text Do Not Match\n");
+        String actualHeaderText = framesPage.getHeaderFramesText();
+        String expectedHeaderText = "Frames";
+        Assert.assertEquals(actualHeaderText, expectedHeaderText, "\n Expected & Actual Header Text Do Not Match\n");
     }
 }
