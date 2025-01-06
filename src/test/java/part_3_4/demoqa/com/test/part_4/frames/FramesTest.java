@@ -10,7 +10,7 @@ public class FramesTest extends BaseTest {
     public void testFrameBigBox() {
         var framesPage = homePage.goToAlertsFramesWindowsCard().clickFrames();
         String actualBigBoxText = framesPage.getTextInBigFrame();
-        String expectedBigBoxText = "This is a simple page";
+        String expectedBigBoxText = "This is a sample page";
         Assert.assertEquals(actualBigBoxText, expectedBigBoxText, "\n Actual & Expected Text Do Not Match\n");
     }
 }
