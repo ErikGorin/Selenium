@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 import static demo.base.BasePage.delay;
 import static utilities.Utility.setUtilityDriver;
@@ -29,6 +30,7 @@ public class BaseTest {
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @BeforeMethod
@@ -57,7 +59,7 @@ public class BaseTest {
 
     @AfterClass
     public void tearDown() {
-        delay(4500);
+        delay(4000);
         driver.quit();
     }
 
